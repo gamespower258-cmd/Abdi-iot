@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Home IoT</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+<h1>🏠 Smart Home IoT Dashboard</h1>
+
+
+<div id="mqttStatus" class="status disconnected">
+🔴 MQTT Disconnected
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+<h3>🌡 Suhu</h3>
+<p id="temp">-- °C</p>
+</div>
+
+
+<div class="card">
+<h3>💧 Kelembapan</h3>
+<p id="hum">-- %</p>
+</div>
+
+
+<div class="card">
+<h3>💡 Lampu</h3>
+<p id="lampStatus">OFF</p>
+</div>
+
+
+</div>
+
+
+<div class="chartBox">
+
+<h2>Grafik Suhu</h2>
+
+<canvas id="tempChart"></canvas>
+
+</div>
+
+
+
+<div class="chartBox">
+
+<h2>Grafik Kelembapan</h2>
+
+<canvas id="humChart"></canvas>
+
+</div>
+
+
+
+<div class="button-group">
+
+<button onclick="lampOn()" class="on">
+💡 ON
+</button>
+
+
+<button onclick="lampOff()" class="off">
+⚫ OFF
+</button>
+
+
+</div>
+
+
+<p>
+Update terakhir:
+<span id="time">--</span>
+</p>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
